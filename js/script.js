@@ -4,7 +4,7 @@ const toDay = Math.round(Date.now()/1000);
 
 setTimeout(() => {
     async function getSun(){
-        const reponse =  await fetch("https://api.sunrise-sunset.org/json?lat="+coordArr[0]+"&lng="+coordArr[1]+"&date="+toDay);
+        const reponse =  await fetch("https://api.sunrise-sunset.org/json?lat="+coordArr[0]+"&lng="+coordArr[1]+"&date="+toDay+"&tzid=Europe/Paris");
         const resultSun = await reponse.json();
         return resultSun
     }
