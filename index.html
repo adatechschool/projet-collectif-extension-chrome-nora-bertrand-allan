@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunrise & Sunset Extension</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./js/script.js" async></script>
+    <script src="./js/dictionary.js" defer></script>
+    <script src="./js/background.js" async></script>
+    <script src="./js/content.js" defer></script>
 </head>
 <body>
     <div class="popup-container">
@@ -21,6 +23,12 @@
         <p><img src="moon.jpg" alt="Sunset Icon" class="icon">&nbsp;<span id="sunset"></span></p>
         <p> Cliquez <a href="#"> ici </a> pour en savoir plus.</p>
     </div>
+<body>
+    <h2 id="date"></h2>
+    <h2 id="time"></h2>
+    <h2 id="phase"></h2>
+    <h2 id="sunset"></h2>
+    <h2 id="sunrise"></h2>
 </body>
 </html>
 
