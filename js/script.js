@@ -1,7 +1,7 @@
-const toDayMoon = Math.round(Date.now()/1000);
-const toDaySun = new Date;
+const toDayMoon = Math.round(Date.now() / 1000);
+const toDaySun = new Date();
 const year = toDaySun.getUTCFullYear();
-const month = toDaySun.getUTCMonth()+1;
+const month = toDaySun.getUTCMonth() + 1;
 const day = toDaySun.getUTCDate();
 const fullDateForSun = year + "-" + month + "-" + day;
 const balisePhase = document.getElementById("phase");
