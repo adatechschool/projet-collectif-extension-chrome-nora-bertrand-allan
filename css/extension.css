@@ -1,0 +1,41 @@
+/*-------------------------EXTENSION CHROME CSS-------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    border-radius: 30%;
+}
+
+main {
+    margin: 0 auto;
+    background : radial-gradient(lightblue, white);
+    width: 200px;
+}
+
+.sun {
+    padding-top: 50px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: #333;
+    border-bottom: 1px solid #000;
+}
+
+.moon {
+    padding: 10px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    height: 100px;
+}
+
+img {
+    width: 3%;
+    padding: 10px;
+    display: block;
+}
