@@ -22,7 +22,7 @@ gps();
 //MOON API
 getMoonPhase().then(result => {
     const moonPhase = result[0].Phase;
-    balisePhase.innerHTML = moonPhase;
+    balisePhase.innerHTML = englishToFrench[moonPhase]
 });
 
 async function getMoonPhase() {
