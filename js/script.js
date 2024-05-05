@@ -23,21 +23,21 @@ const baliseSunrise = document.getElementById("sunrise");
         const sunrise = resultSun.results.sunrise.slice(11,19);
         baliseSunrise.innerHTML = resultSun.results.sunrise.slice(11,19);
         baliseSunset.innerHTML = resultSun.results.sunset.slice(11,19);
-    }
+    };
     
     //MOON API
 
     async function getMoonPhase(){
         const reponse =  await fetch("http://api.farmsense.net/v1/moonphases/?d="+toDayMoon);
         const resultMoon = await reponse.json();
-        return resultMoon
-    }
+        return resultMoon;
+    };
     
     getMoonPhase().then(result => {
-        const moonPhase = result[0].Phase
+        const moonPhase = result[0].Phase;
+        balisePhase.innerHTML = moonPhase;
         getImgMoon(moonPhase);
-        balisePhase.innerHTML = moonPhase
-})
+});
 
 
 // COORDONNEES NAVIGATEUR

@@ -10,11 +10,13 @@ const mooon = {
     'Waning Crescent' : 'waning_crescent.svg'
 };
 function getImgMoon(moonPhase) {
+    const divMoon = document.createElement("div");
     const imgMoon = document.createElement("img");
     if (moonPhase in mooon) {
         imgMoon.src = "../img/" + mooon[moonPhase];
     } else { 
         imgMoon.src = "../img/new_moon.svg";
     }
-        document.body.appendChild(imgMoon);
+    divMoon.appendChild(imgMoon);
+    document.getElementById("phase").appendChild(divMoon);
 };

@@ -26,7 +26,7 @@ main {
     border-bottom: 1px solid #000;
 }
 
-.moon {
+#phase {
     padding: 10px;
     text-align: center;
     color: #000;
@@ -34,8 +34,7 @@ main {
     height: 100px;
 }
 
-img {
-    width: 3%;
-    padding: 10px;
-    display: block;
+#phase img {
+    width: 30%;
+    padding: 20px;
 }
