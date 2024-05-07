@@ -1,5 +1,5 @@
 //image de la lune
-const mooon = {
+/*  const mooon = {
     'New Moon' : 'new_moon.svg',
     'Waxing Crescent' : 'waxing_crescent.svg',
     'First Quarter' : 'first_quarter.svg',
@@ -10,7 +10,7 @@ const mooon = {
     'Waning Crescent' : 'waning_crescent.svg',
     'Dark Moon' : 'waning_crescent.svg'
 };
-function getImgMoon(moonPhase) {
+ function getImgMoon(moonPhase) {
     const divMoon = document.createElement("div");
     const imgMoon = document.createElement("img");
     if (moonPhase in mooon) {
@@ -20,4 +20,44 @@ function getImgMoon(moonPhase) {
     }
     divMoon.appendChild(imgMoon);
     document.getElementById("phase").appendChild(divMoon);
-};
+}; */
+
+
+
+/* 
+window.addEventListener('load', getImgMoon) */
+/* 
+window.addEventListener('load', () => getImgMoon("New Moon")); */
+
+
+
+/* 
+window.addEventListener('load', () => {
+    // Here you can set the moon phase based on your logic.
+    const moonPhase = "New Moon"; // Change this to the actual moon phase
+    getImgMoon(moonPhase);
+});  */
+
+ 
+
+const moonPhases = [
+    "new_moon.svg",
+    "waxing_crescent.svg",
+    "first_quarter.svg",
+    "waxing_gibbous.svg",
+    "full_moon.svg",
+    "waning_gibbous.svg",
+    "last_quarter.svg",
+    "waning_crescent.svg"
+];
+
+let currentPhaseIndex = 0;
+const moonImage = document.getElementById("moon-image");
+
+function changeMoonPhase() {
+    moonImage.src = "../img/" + moonPhases[currentPhaseIndex];
+    currentPhaseIndex = (currentPhaseIndex + 1) % moonPhases.length;
+}
+
+// Change moon phase every 1 second (adjust interval as needed)
+setInterval(changeMoonPhase, 1000);

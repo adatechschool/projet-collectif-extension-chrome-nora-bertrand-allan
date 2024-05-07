@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extension Chrome : Moon, Sunrise & Sunset</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/extension.css">
+
     <script src="./js/dictionary.js" defer></script>
     <script src="./js/background.js" rel="javascript" type="text/javascript" async></script>
     <script src="./js/moon.js" rel="javascript" type="text/javascript" async></script>
@@ -28,21 +30,23 @@
         <h2 id="time" class="text"></h2>
       
         <!-- <p><img src="waning crescent.png" alt="Phase Icon" class="icon">&nbsp;<span id="phase"></span></p>  -->
- <!--        <div id="phase"> -->
+       <!--  <div id="phase">  -->
         <p class="text"><img src="images/sun.jpg" alt="Sunrise Icon" class="icon">&nbsp;<span id="sunrise"></span></p>
         <p class="text"><img src="images/moon.jpg" alt="Sunset Icon" class="icon">&nbsp;<span id="sunset"></span></p>
+        <div class="moon-phase">
+            <img id="moon-image" src="../img/new_moon.svg" alt="Moon Phase">
         <p class="text"> Cliquez <a href="#"> ici </a> pour en savoir plus.</p>
     </div> 
         <div class="icon-container">
           <!--   <img src="extention.jpg" alt="Extension Icon" class="icon"> -->
-        <div class="main">
+    <!--      <div class="main"> --> 
         <div class="time">
             <p id="date"></p>
             <p id="time"></p>
         </div>
         <div id="sunrise" class="sun"></div>
         <div id="sunset" class="sun"></div>
-        <div id="phase"></div> 
+       <!--  <div id="phase"></div> --> 
     </div>
     <!-- <div class="popup-container">
         <div class="icon-container">
