@@ -65,7 +65,7 @@ img.icon {
 
 .wrapper{
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     background: #48bcff;
     display: block;
     position: relative; 
@@ -75,25 +75,24 @@ img.icon {
 
  .round{
     background: #FFFF00;
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
     position: absolute;
-    left: 45%;
+    left: 50%;
     display: block;
     border-radius: 50%;
-    animation: ani-three 8s ease-in-out forwards 1,
-               ani-four 8s ease-in-out 8s forwards 1;
+    animation: ani-three 4s ease-in-out 1.5s forwards 1,
+               ani-four 4s ease-in-out 8s forwards 1;
 } 
 .wrapper-2{
     position: absolute;
     bottom: 0;
 } 
 
-
 .img-area img{
     width: 25%;
     float: left;
-}  
+}   
  
  @keyframes ani-one{
     75%{
