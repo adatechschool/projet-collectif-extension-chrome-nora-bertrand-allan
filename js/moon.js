@@ -51,13 +51,13 @@ const moonPhases = [
     "waning_crescent.svg"
 ];
 
-let currentPhaseIndex = 0;
-const moonImage = document.getElementById("moon-image");
+let currentPhaseIndex = 0
+const moonImage = document.getElementById("moon-image")
 
 function changeMoonPhase() {
-    moonImage.src = "../img/" + moonPhases[currentPhaseIndex];
-    currentPhaseIndex = (currentPhaseIndex + 1) % moonPhases.length;
+    moonImage.src = "../img/" + moonPhases[currentPhaseIndex]
+    currentPhaseIndex = (currentPhaseIndex + 1) % moonPhases.length
 }
 
-// Change moon phase every 1 second (adjust interval as needed)
-setInterval(changeMoonPhase, 1000);
+
+setInterval(changeMoonPhase, 1000)
