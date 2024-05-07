@@ -19,7 +19,8 @@ const englishToFrench = {
 "Full Moon" : "Pleine lune",
 "Waning Gibbous" : "Gibbeuse décroissante",
 "Last Quarter" : "Dernier quartier",
-"Waning Crescent" : "Dernier croissant"
+"Waning Crescent" : "Dernier croissant",
+'Dark Moon' : 'Dernier croissant'
 }
 
 const switchDay = {

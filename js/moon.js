@@ -7,7 +7,8 @@ const mooon = {
     'Full Moon' : 'full_moon.svg',
     'Waning Gibbous' : 'waning_gibbous.svg',
     'Last Quarter' : 'last_quarter.svg',
-    'Waning Crescent' : 'waning_crescent.svg'
+    'Waning Crescent' : 'waning_crescent.svg',
+    'Dark Moon' : 'waning_crescent.svg'
 };
 function getImgMoon(moonPhase) {
     const divMoon = document.createElement("div");
