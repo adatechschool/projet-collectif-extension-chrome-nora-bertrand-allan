@@ -8,11 +8,12 @@
     <script src="./js/settings.js" async></script>
 </head>
 <body>
+    <a href="index.html">Page principal</a>
     <h2 id="date"></h2>
     <h2 id="time"></h2>
 
     <label for="timeZone">Choose a time zone :</label>
-    <select name="timeZone" id="timeZone_select">
+    <select name="timeZone" id="timeZone_select" onchange="getSelectedValue()">
       <option value="">--Please choose a time zone--</option>
     </select>
 </body>
