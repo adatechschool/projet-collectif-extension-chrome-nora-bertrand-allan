@@ -17,5 +17,4 @@ function changeMoonPhase() {
     currentPhaseIndex = (currentPhaseIndex + 1) % moonPhases.length
 }
 
-
 setInterval(changeMoonPhase, 1000)
