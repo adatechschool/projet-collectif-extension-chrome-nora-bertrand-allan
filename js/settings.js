@@ -36,8 +36,6 @@ function addTimeZoneToSelect(){
 }
 
 function getSelectedValue(){
-    const test = document.getElementById("test")
-    test.innerHTML = "Hello World !"
     tzid = localStorage.setItem("tzid",document.getElementById("timeZone_select").value);
 }
 
