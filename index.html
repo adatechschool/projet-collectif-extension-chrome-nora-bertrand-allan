@@ -6,28 +6,30 @@
     <title>Sunrise & Sunset Extension</title>
     <link rel="stylesheet" href="style.css">
     <script src="./js/dictionary.js" defer></script>
-    <script src="./js/background.js" defer></script>
-    <script src="./js/content.js" defer></script>
+    <script src="./js/background.js" async></script>
+    <script src="./js/content.js" defer></script> 
 </head>
 <body>
-    <div class="popup-container">
-        <div class="icon-container">
-            <img src="extention.jpg" alt="Extension Icon" class="icon">
-        </div>
 
-        <h1>Sunrise & Sunset Extension</h1>
-        <p>Bienvenue dans l'extension Sunrise & Sunset. Cette extension fournit des informations sur l'heure du lever, du coucher du soleil et des phases la lune.</p>
-        <p><img src="waning crescent.png" alt="Phase Icon" class="icon">&nbsp;<span id="phase"></span></p>
-        <p><img src="sun.jpg" alt="Sunrise Icon" class="icon">&nbsp;<span id="sunrise"></span></p>
-        <p><img src="moon.jpg" alt="Sunset Icon" class="icon">&nbsp;<span id="sunset"></span></p>
-        <p> Cliquez <a href="#"> ici </a> pour en savoir plus.</p>
-    </div>
-<body>
-    <h2 id="date"></h2>
-    <h2 id="time"></h2>
-    <h2 id="phase"></h2>
-    <h2 id="sunset"></h2>
-    <h2 id="sunrise"></h2>
+    <div class="popup-container">
+    <div class="icon-container">
+<!--  <img src="extention.jpg" alt="Extension Icon" class="icon">  -->
+    </div> 
+        <div class="wrapper">
+        <div class="round"></div>
+        <div class="wrapper-2">
+        <div class="img-area">  
+        </div>      
+        <h1 class="text">Sunrise & Sunset Extension</h1>
+        <p class="text">Bienvenue dans l'extension Sunrise & Sunset. Cette extension fournit des informations sur les phases du lever, du coucher du soleil et de la lune.</p>
+        <h2 id="date" class="text"></h2>
+        <h2 id="time" class="text"></h2>
+        <!--  &nbsp; represents a non-breaking space -->
+        <!-- <p><img src="waning crescent.png" alt="Phase Icon" class="icon">&nbsp;<span id="phase"></span></p>  -->
+        <p class="text"><img src="images/sun.jpg" alt="Sunrise Icon" class="icon">&nbsp;<span id="sunrise"></span></p>
+        <p class="text"><img src="images/moon.jpg" alt="Sunset Icon" class="icon">&nbsp;<span id="sunset"></span></p>
+        <p class="text"> Cliquez <a href="#"> ici </a> pour en savoir plus.</p>
+    </div> 
 </body>
-</html>
+</html> 
 
