@@ -9,7 +9,8 @@ function stockPosition(position) {
 };
 
 function refreshTime() {
-    const dateString = new Date().toLocaleString("fr-FR", {timeZone: "Europe/Paris"});
+    const tzid2 = localStorage.getItem("tzid")
+    const dateString = new Date().toLocaleString("fr-FR", {timeZone: tzid2});
     const getDay = new Date().getDay()
     const formattedString = dateString.replace(", ", " - ");
     const formattedTime = formattedString.slice(10, 19);
@@ -20,3 +21,4 @@ function refreshTime() {
 
 gps();
 setInterval(refreshTime, 1000);
+
