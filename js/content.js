@@ -19,6 +19,17 @@ function refreshTime() {
     dateDisplay.innerHTML = formattedDate;
 }
 
+function getImgMoon(moonPhase) {
+    const moonImage = document.getElementById("moon-image");
+    console.log(moonPhases);
+    if (moonPhase in moonPhases) {
+        moonImage.src = "../img/" + moonPhases[moonPhase];
+    } else { 
+        moonImage.src = "../img/new_moon.svg";
+    }
+    balisePhase.innerHTML = englishToFrench[moonPhase]
+};
+
 gps();
 setInterval(refreshTime, 1000);
 

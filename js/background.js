@@ -17,7 +17,7 @@ async function getMoonPhase() {
 
 getMoonPhase().then(result => {
     const moonPhase = result[0].Phase
-    balisePhase.innerHTML = englishToFrench[moonPhase]
+    getImgMoon(moonPhase)
 })
 
 
