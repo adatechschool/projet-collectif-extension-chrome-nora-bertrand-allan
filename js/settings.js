@@ -29,6 +29,7 @@ function addTimeZoneToSelect(){
             const opt = document.createElement("option")
             opt.value = result[i];
             opt.innerHTML = result[i];
+            console.log(timeZoneSelect);
             timeZoneSelect.appendChild(opt);
         }
     })
