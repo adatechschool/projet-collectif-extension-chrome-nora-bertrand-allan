@@ -7,6 +7,7 @@ const fullDateForSun = year + "-" + month + "-" + day;
 const balisePhase = document.getElementById("phase");
 const baliseSunset = document.getElementById("sunset");
 const baliseSunrise = document.getElementById("sunrise");
+//console.log(toDaySun);
 
 //SUN API
 
@@ -19,12 +20,17 @@ const baliseSunrise = document.getElementById("sunrise");
     async function getSun(coordArr) {
         const reponse =  await fetch("https://api.sunrise-sunset.org/json?lat="+coordArr[0]+"&lng="+coordArr[1]+"&date="+fullDateForSun+"&tzid=Europe/Paris&formatted=0");
         const resultSun = await reponse.json();
-        const sunset = resultSun.results.sunset.slice(11,19);
-        const sunrise = resultSun.results.sunrise.slice(11,19);
-        baliseSunrise.innerHTML = resultSun.results.sunrise.slice(11,19);
-        baliseSunset.innerHTML = resultSun.results.sunset.slice(11,19);
-    };
-    
+        const sunset = resultSun.results.sunset;
+        const sunrise = resultSun.results.sunrise;
+        if (sunset != null || sunrise != null) {
+            baliseSunrise.innerHTML = resultSun.results.sunrise.slice(11,16);
+            baliseSunset.innerHTML = resultSun.results.sunset.slice(11,16);
+        } else {
+            baliseSunrise.innerHTML = "N/A";
+            baliseSunset.innerHTML = "N/A";
+        };
+    }
+
     //MOON API
 
     async function getMoonPhase(){
@@ -50,4 +56,13 @@ function stockPosition(position){
     getSun(coordArr)
 };
 gps();
+
+//DATE ET HEURE
+dateScreen = new Date;
+dateScreenFix = dateScreen.toLocaleDateString("fr");
+document.getElementById("date").innerHTML = dateScreenFix;
+
+timeScreen = new Date;
+timeScreenFix = timeScreen.toLocaleTimeString("fr");
+document.getElementById("time").innerHTML = timeScreenFix;
 
