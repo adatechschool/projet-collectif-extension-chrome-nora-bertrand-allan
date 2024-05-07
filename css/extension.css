@@ -5,36 +5,54 @@
     padding: 0;
 }
 
-html {
-    border-radius: 30%;
+.main {
+    margin: 0 auto;
+    background: url(../img/night.png) no-repeat;
+    width: 300px;
 }
 
-main {
+.transformedDawn {
     margin: 0 auto;
-    background : radial-gradient(lightblue, white);
-    width: 200px;
+    background: url(../img/night.png) no-repeat;
+    width: 300px;
+    border: #e1db23 solid 2px;
+}
+
+.transformedNoon {
+    margin: 0 auto;
+    background: url(../img/day.png) no-repeat;
+    width: 300px;
+    border: #e9810b solid 2px;
+}
+
+.transformedDusk {
+    margin: 0 auto;
+    background: url(../img/night.png) no-repeat;
+    width: 300px;
+    border: #2e2079 solid 2px;
+}
+
+.time {
+    text-align: center;
+    padding: 20px;
 }
 
 .sun {
     padding-top: 50px;
-    width: 200px;
-    height: 100px;
     text-align: center;
     font-size: 1.2em;
     font-weight: lighter;
     color: #333;
-    border-bottom: 1px solid #000;
 }
 
 #phase {
     padding: 10px;
     text-align: center;
-    color: #000;
+    color: #e1db23;
+    text-shadow: #000 1px 1px 1px;
     font-weight: bold;
-    height: 100px;
 }
 
 #phase img {
-    width: 30%;
-    padding: 20px;
+    width: 50%;
 }
