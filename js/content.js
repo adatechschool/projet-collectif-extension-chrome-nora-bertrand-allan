@@ -9,8 +9,7 @@ function stockPosition(position) {
 };
 
 function refreshTime() {
-    const tzid2 = localStorage.getItem("tzid")
-    const dateString = new Date().toLocaleString("fr-FR", {timeZone: tzid2});
+    const dateString = new Date().toLocaleString("fr-FR", {timeZone: "Europe/Paris"});
     const getDay = new Date().getDay()
     const formattedString = dateString.replace(", ", " - ");
     const formattedTime = formattedString.slice(10, 19);
@@ -19,17 +18,5 @@ function refreshTime() {
     dateDisplay.innerHTML = formattedDate;
 }
 
-function getImgMoon(moonPhase) {
-    const moonImage = document.getElementById("moon-image");
-    console.log(moonPhases);
-    if (moonPhase in moonPhases) {
-        moonImage.src = "../img/" + moonPhases[moonPhase];
-    } else { 
-        moonImage.src = "../img/new_moon.svg";
-    }
-    balisePhase.innerHTML = englishToFrench[moonPhase]
-};
-
 gps();
 setInterval(refreshTime, 1000);
-

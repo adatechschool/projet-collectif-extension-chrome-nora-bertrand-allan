@@ -1,3 +1,4 @@
+const toDayMoon = Math.round(Date.now() / 1000);
 const toDaySun = new Date();
 const year = toDaySun.getUTCFullYear();
 const month = toDaySun.getUTCMonth() + 1;
@@ -8,31 +9,16 @@ const baliseSunset = document.getElementById("sunset");
 const baliseSunrise = document.getElementById("sunrise");
 const timeDisplay = document.getElementById("time");
 const dateDisplay = document.getElementById("date");
-const timeZoneSelect = document.getElementById("timeZone_select")
-let tzid = "Europe/Paris"
-
-const moonPhases = {
-    'New Moon' : 'new_moon.svg',
-    'Waxing Crescent' : 'waxing_crescent.svg',
-    'First Quarter' : 'first_quarter.svg',
-    'Waxing Gibbous' : 'waxing_gibbous.svg',
-    'Full Moon' : 'full_moon.svg',
-    'Waning Gibbous' : 'waning_gibbous.svg',
-    'Last Quarter' : 'last_quarter.svg',
-    'Waning Crescent' : 'waning_crescent.svg',
-    'Dark Moon' : 'waning_crescent.svg'
-};
 
 const englishToFrench = {
-    "New Moon" : "Nouvelle lune",
-    "Waxing Crescent" : "Premier croissant",
-    "First Quarter" : "Premier quartier",
-    "Waxing Gibbous" : "Gibbeuse croissante",
-    "Full Moon" : "Pleine lune",
-    "Waning Gibbous" : "Gibbeuse décroissante",
-    "Last Quarter" : "Dernier quartier",
-    "Waning Crescent" : "Dernier croissant",
-    'Dark Moon' : 'Dernier croissant'
+"New Moon" : "Nouvelle lune",
+"Waxing Crescent" : "Premier croissant",
+"First Quarter" : "Premier quartier",
+"Waxing Gibbous" : "Gibbeuse croissante",
+"Full Moon" : "Pleine lune",
+"Waning Gibbous" : "Gibbeuse décroissante",
+"Last Quarter" : "Dernier quartier",
+"Waning Crescent" : "Dernier croissant"
 }
 
 const switchDay = {
