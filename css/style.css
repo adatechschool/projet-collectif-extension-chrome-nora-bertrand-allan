@@ -9,13 +9,18 @@ body{
 
 .popup-container {
     width: 300px; 
-    padding: 20px;
- 
+    height: auto;
 } 
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: #fff000;
+    font-size: 1.2em;
+    text-shadow: 1px 2px 2px black;
+}
+
+h3.text {
+    color: #fff000;
+    font-size: 0.8em;
 }
 
 
@@ -28,6 +33,7 @@ p {
 .text{
     color:white;
     text-shadow: 1px 1px 2px black;
+    line-height: 0.7em;
 }
 
 
@@ -47,15 +53,17 @@ p {
 
 a {
     color: #007bff;
+    font-size: 12px;
     text-decoration: none;
     transition: color 0.3s ease;
+    margin-bottom: 2px;
 }
 
 a:hover {
     color: #0056b3; 
 }
 img.icon {
-    width: 20px; 
+    width: 20%; 
     height: auto; 
     margin-right: 5px; 
     display: inline; 
@@ -63,18 +71,20 @@ img.icon {
 }    
 
 
-.wrapper{
+.wrapper {
     width: 100%;
-    height: 95vh;
-    background: #48bcff;
+    height: 88vh;
+    background-color: rgba(4,4,39,1);
+    background-image: linear-gradient(rgba(72,188,255,1), rgba(255,255,255,0));
     display: block;
     position: relative; 
     animation: ani-one 4s ease-in-out 1.5s forwards 1,
                ani-two 4s ease-in-out 10s forwards 1; 
 } 
 
- .round{
-    background: #FFFF00;
+ .round {
+    background: radial-gradient(circle, #fff000 48%, rgba(255,255,0,0) 70%);
+    box-shadow: inset -10px 0 15px rgba(255,255,255,0.8);
     height: 120px;
     width: 120px;
     position: absolute;
@@ -84,22 +94,23 @@ img.icon {
     animation: ani-three 4s ease-in-out 1.5s forwards 1,
                ani-four 4s ease-in-out 8s forwards 1;
 } 
-.wrapper-2{
+.wrapper-2 {
+    width: 300px;
     position: absolute;
     bottom: 0;
 } 
 
-.img-area img{
+.img-area img {
     width: 300%;
     float: left;
 }   
  
  @keyframes ani-one{
     75%{
-        background: #d2c13a;
+        background-color: #fa9534;
     }
     100%{
-        background: #040427;
+        background-color: #040427;
     }
 
 }
@@ -107,15 +118,14 @@ img.icon {
 
 @keyframes ani-two{
     0%{
-        background: #040427;
+        background-color: #040427;
     }
     75%{
-        background: #d2c13a;
+        background-color: #fa9534;
     }
     100%{
-        background: #48bcff;
+        background-color: #123447;
     }
-
 } 
 
  @keyframes ani-three{
@@ -125,7 +135,6 @@ img.icon {
     100%{
        top: 70%
     }
-
 }
 
 @keyframes ani-four{
@@ -135,13 +144,16 @@ img.icon {
     100%{
      top: 0;
     }
-
 }    
 
-
+.moon-phase {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 .moon-phase img {
-    width: 100px; 
-    height: auto;
+    width: 100px;
+    margin-left: 30px;
     animation: moon-phase-animation 2s infinite;
 }
 
@@ -156,6 +168,36 @@ img.icon {
         transform: scale(1);
     }
 }
+
+#phase {
+    text-align: center;
+    color: white;
+    text-shadow: #000 1px 1px 2px;
+    padding: 15px 5px;
+    font-size: 16px;
+}
+
+/* .moon {
+    background: radial-gradient(circle at 30%,30%, #e0e0e0 0%, rgba(244,244,244,0.5) 50%, rgba(244,244,244,0) 100%);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    display: block;
+    border-radius: 50%;
+}
+
+.sun {
+    background: radial-gradient(circle at 30%,30%, #FFFF00 0%, rgba(255,255,0,0.5) 50%, rgba(255,255,0,0) 100%);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    display: block;
+    border-radius: 50%;
+} */
 
 
 

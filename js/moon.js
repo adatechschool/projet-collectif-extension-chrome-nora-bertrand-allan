@@ -9,12 +9,28 @@ const moonPhases = [
     "waning_crescent.svg"
 ];
 
-let currentPhaseIndex = 0
-const moonImage = document.getElementById("moon-image")
+function getImgMoon(moonPhase) {
+    const moonImage = document.getElementById("moon-image");
+    if (moonPhase in moonPhases) {
+        moonImage.src = "../img/" + moonPhases[moonPhase];
+    } else { 
+        moonImage.src = "../img/new_moon.svg";
+    }
+    balisePhase.innerHTML = englishToFrench[moonPhase]
+};
 
+getMoonPhase().then(result => {
+    const moonPhase = result[0].Phase;
+    getImgMoon(moonPhase);
+});
+
+let currentPhaseIndex = 0;
+const moonImage = document.getElementById("moon-image");
 function changeMoonPhase() {
-    moonImage.src = "../img/" + moonPhases[currentPhaseIndex]
-    currentPhaseIndex = (currentPhaseIndex + 1) % moonPhases.length
+    let currentPhaseI = (currentPhaseIndex + 1) % moonPhases.length;
+    console.log(currentPhaseIndex);
+    moonImage.src = "img/" + moonPhases[currentPhaseI];
+    console.log(moonImage.src);
 }
 
-setInterval(changeMoonPhase, 1000)
+setInterval(changeMoonPhase, 1000);

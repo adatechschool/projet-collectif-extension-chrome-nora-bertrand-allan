@@ -20,6 +20,12 @@ a:hover {
 
 h2 {
     color: #333;
+    font-size: 0.9em;
+}
+
+h3 {
+    color: #333;
+    font-size: 0.7em;
 }
 
 label {
