@@ -78,11 +78,11 @@ img.icon {
     background-image: linear-gradient(rgba(72,188,255,1), rgba(255,255,255,0));
     display: block;
     position: relative; 
-    animation: ani-one 4s ease-in-out 1.5s forwards 1,
-               ani-two 4s ease-in-out 10s forwards 1; 
+    /* animation: ani-one 4s ease-in-out 1.5s forwards 1,
+               ani-two 4s ease-in-out 10s forwards 1;  */
 } 
 
- .round {
+ /* .round {
     background: radial-gradient(circle, #fff000 48%, rgba(255,255,0,0) 70%);
     box-shadow: inset -10px 0 15px rgba(255,255,255,0.8);
     height: 120px;
@@ -93,7 +93,7 @@ img.icon {
     border-radius: 50%;
     animation: ani-three 4s ease-in-out 1.5s forwards 1,
                ani-four 4s ease-in-out 8s forwards 1;
-} 
+}  */
 .wrapper-2 {
     width: 300px;
     position: absolute;
@@ -177,9 +177,21 @@ img.icon {
     font-size: 16px;
 }
 
-/* .moon {
-    background: radial-gradient(circle at 30%,30%, #e0e0e0 0%, rgba(244,244,244,0.5) 50%, rgba(244,244,244,0) 100%);
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+.moon {
+    background: radial-gradient(circle, #afbccc 48%, rgba(255,255,0,0) 70%);
+    box-shadow: inset -5px 0 8px rgba(255,255,255,0.7);
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    display: block;
+    border-radius: 50%;
+    animation: moon-bg 2s forwards 1;
+}
+
+.sun {
+    background: radial-gradient(circle, #fff000 48%, rgba(255,255,0,0) 70%);
+    box-shadow: inset -10px 0 15px rgba(255,255,255,0.8);
     height: 120px;
     width: 120px;
     position: absolute;
@@ -187,17 +199,6 @@ img.icon {
     display: block;
     border-radius: 50%;
 }
-
-.sun {
-    background: radial-gradient(circle at 30%,30%, #FFFF00 0%, rgba(255,255,0,0.5) 50%, rgba(255,255,0,0) 100%);
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    height: 120px;
-    width: 120px;
-    position: absolute;
-    left: 50%;
-    display: block;
-    border-radius: 50%;
-} */
 
 
 

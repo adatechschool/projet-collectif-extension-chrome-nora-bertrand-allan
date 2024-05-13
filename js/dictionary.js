@@ -1,5 +1,7 @@
 const toDayMoon = Math.round(Date.now() / 1000);
 const toDaySun = new Date();
+const currentHour = toDaySun.getHours();
+//const currentHour = 5;
 const year = toDaySun.getUTCFullYear();
 const month = toDaySun.getUTCMonth() + 1;
 const day = toDaySun.getUTCDate();
@@ -11,6 +13,9 @@ const baliseSunrise = document.getElementById("sunrise");
 const timeDisplay = document.getElementById("time");
 const dateDisplay = document.getElementById("date");
 const ZoneUTC = document.getElementById("tzid");
+const backgroundElement = document.querySelector(".wrapper");
+const moonElement = document.querySelector(".moon");
+const sunElement = document.querySelector(".sun"); 
 
 const englishToFrench = {
 "New Moon" : "Nouvelle lune",
